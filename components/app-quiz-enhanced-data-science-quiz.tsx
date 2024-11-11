@@ -237,7 +237,6 @@ export function EnhancedDataScienceQuiz() {
   const [selectedQuizVersion, setSelectedQuizVersion] = useState("1")
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState<UserAnswers>({})
-  const [questions, setQuestions] = useState<Question[]>([])
   const [timeRemaining, setTimeRemaining] = useState(quizData.Quizzes[0]["Time Allowed"] * 60)
   const [attemptsLeft, setAttemptsLeft] = useState(quizData.Quizzes[0]["Number Attempts Allowed"])
   const [quizSubmitted, setQuizSubmitted] = useState(false)
