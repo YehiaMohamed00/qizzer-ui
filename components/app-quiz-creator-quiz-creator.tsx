@@ -10,11 +10,14 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Progress } from "@/components/ui/progress"
 import { Switch } from "@/components/ui/switch"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { useToast } from "@/hooks/use-toast"
 import { 
+  Settings, 
+  BarChart, 
   PlusCircle, 
   Trash2, 
   Eye, 
@@ -23,7 +26,10 @@ import {
   HelpCircle, 
   Sun, 
   Moon,
-  Laptop
+  Laptop,
+  Upload,
+  FileText,
+  Globe
 } from "lucide-react"
 
 const questionTypes = [
@@ -118,12 +124,12 @@ export function QuizCreator() {
       title: "Quiz Saved",
       description: "Your quiz has been saved successfully.",
     })
-    router.push(process.env.NODE_ENV === 'production' ? '/Quizzer-RAG/data-science-quiz' : '/data-science-quiz')
+    router.push(process.env.NODE_ENV === 'production' ? '/data-science-quiz' : '/data-science-quiz')
   }
 
   const handlePreview = () => {
     // Navigate to the Enhanced Quiz component
-    router.push(process.env.NODE_ENV === 'production' ? '/Quizzer-RAG/data-science-quiz' : '/data-science-quiz')
+    router.push(process.env.NODE_ENV === 'production' ? '/data-science-quiz' : '/data-science-quiz')
   }
 
   const renderQuestion = (question: any, index: number) => (
